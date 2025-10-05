@@ -5,32 +5,51 @@ Created on Wed Nov 18 19:37:53 2020
 @author: bruno
 """
 
-#Import libraries. Lasio is a library to handle petrophysical data.
+# Import libraries
 import lasio
+import pandas as pd
+import os 
 
-# Define the root and relative paths clearly
-DATA_DIR = "data/" 
-INPUT_FILE = DATA_DIR + "well_logs.csv"
-OUTPUT_MODEL_DIR = "models/final/"
+# --- 1. Define Paths ---
+# Use os.path.join for cross-platform compatibility
+DATA_DIR = "data"
+INPUT_FILENAME = "well_logs.las"  # Renamed to reflect LAS format
+INPUT_PATH = os.path.join(DATA_DIR, INPUT_FILENAME)
 
-#Upload .LAS files (well log files exported from Petrophysics software)
-las_well1 = lasio.read("INPUT_FILE")
+MODELS_DIR = "models/final"
+OUTPUT_FILENAME = "processed_well1_data.csv"
+OUTPUT_PATH = os.path.join(MODELS_DIR, OUTPUT_FILENAME)
 
-#Convert .LAS to DATAFRAME
+# --- 2. Data Ingestion ---
+print(f"Reading LAS file from: {INPUT_PATH}")
+
+try:
+    las_well1 = lasio.read(INPUT_PATH)
+except FileNotFoundError:
+    print(f"Error: File not found at {INPUT_PATH}. Check your directory structure.")
+    
+
+# Convert .LAS to DATAFRAME
 df_well1 = las_well1.df()
 
-#Verify if there are null values
-df_well1.isnull().sum()
+# --- 3. Data Cleaning and Processing ---
+# Verify if there are null values (optional: for inspection)
+# print("Null counts before cleaning:\n", df_well1.isnull().sum()) 
 
-#Keep only relevant columns and drop null values
-df_well1.columns
-df_well1_clear =df_well1.dropna(subset=['POR_LAB','PERM_LAB'])
+# Keep only relevant columns and drop null values on key target/feature columns
+# Assuming 'POR_LAB' and 'PERM_LAB' are the target variables for ML
+df_well1_clear = df_well1.dropna(subset=['POR_LAB', 'PERM_LAB'])
+
+# Final dropna() should be carefully considered, or use imputation
 well1_data = df_well1_clear.dropna()
 
-#Export as .CSV
-well1_data.to_csv(OUTPUT_MODEL_DIR, index = False)
+# --- 4. Export as .CSV ---
+# Ensure the output directory exists before writing
+os.makedirs(MODELS_DIR, exist_ok=True) 
 
-############## Ends here
+print(f"Exporting processed data to: {OUTPUT_PATH}")
+well1_data.to_csv(OUTPUT_PATH, index=False)
+print("Processing complete.")
 
 
 
