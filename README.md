@@ -1,16 +1,54 @@
-# Porosity-prediction-with-machine-learning
-Development of a novel machine learning workflow for porosity prediction in complex poroous networks from the Brazilian Pre-Salt carbonate fields.
+# Porosity Prediction with Machine Learning
 
-This repository contains the Python code and resources developed for the Machine Learning component of a PhD Thesis focused on predicting rock porosity using well logs, acoustic image logs, and sidewall core data. The project explores the efficacy of several machine learning models, including Random Forest, XGBoost, and Support Vector Machines (SVM), and details the feature engineering and hyperparameter tuning processes used to refine their predictive performance.
+This repository contains Python code and resources developed for a novel machine learning workflow to predict rock porosity in complex porous networks. The focus is on carbonate reservoirs from Brazil's Pre-Salt fields, supporting a PhD thesis project.
 
-# Project Overview
-The core objective is to accurately estimate porosity, a critical reservoir property, by integrating various well log measurements. The data is supplied as CSV files containing depth-indexed well log readings (e.g., Gamma Ray, Density, Neutron, etc.) and Porosity readings from sidewall core.
+## Table of Contents
 
-#Key Steps:
-Data Ingestion: Reading and preparation of well log data from CSV files.
-Exploratory Data Analysis: Creating cross plots, checking biases, removing outliers, verifying correlations.
-Feature Engineering: Creation of new, more informative features from raw log data (e.g. log ratios).
-Model Implementation: Training and testing of Random Forest, XGBoost, and SVR regression models.
-Hyperparameter Optimization: Using techniques like Grid Search or Bayesian Optimization to find the optimal settings for each model.
-Evaluation: Assessing model performance using appropriate regression metrics (e.g., Root Mean Square Error (RMSE), R 
-2 score, Learning rate).
+- [Project Overview](#project-overview)
+- [Workflow](#workflow)
+- [Getting Started](#getting-started)
+- [Results & Evaluation](#results--evaluation)
+
+## Project Overview
+
+The main objective is to accurately estimate porosity—a key reservoir property—by integrating a variety of well log measurements. Input data is provided as CSV files containing depth-indexed well logs, acoustic image logs, and sidewall core data.
+
+## Workflow
+
+The project follows these major steps:
+
+1. **Data Ingestion**: Load and prepare well log data from CSV files.
+2. **Exploratory Data Analysis (EDA)**: Generate cross plots, check for bias, remove outliers, and analyze feature correlations.
+3. **Feature Engineering**: Create new, more informative features from raw log data (e.g., log ratios).
+4. **Model Building**: Train and test several regression models, including Random Forest, XGBoost, and SVR.
+5. **Hyperparameter Optimization**: Use Grid Search or Bayesian Optimization to fine-tune model parameters.
+6. **Evaluation**: Assess model performance with regression metrics such as RMSE and R² score.
+
+## Getting Started
+
+### Prerequisites
+
+- Python 3.7+
+- Recommended: virtualenv or conda
+
+Install requirements:
+
+```bash
+pip install -r requirements.txt
+```
+
+### Data
+
+Place your well log CSV files in the `data/` directory.
+
+
+## Results & Evaluation
+
+Model performance is evaluated using:
+
+- **Root Mean Square Error (RMSE)**
+- **R² Score**
+- Learning curves and feature importance plots
+
+Results will be saved in the `results/` directory.
+
