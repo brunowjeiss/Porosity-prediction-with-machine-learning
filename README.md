@@ -1,7 +1,7 @@
 # Porosity-prediction-with-machine-learning
-Porosity prediction for Brazilian Pre-Salt carbonate fields integrating well logs and acoustic image logs.
+Development of a novel machine learning workflow for porosity prediction in complex poroous networks from the Brazilian Pre-Salt carbonate fields.
 
-This repository contains the Python code and resources developed for the Machine Learning component of a PhD Thesis focused on predicting rock porosity using well log data. The project explores the efficacy of several machine learning models, including Random Forest, XGBoost, and Support Vector Machines (SVM), and details the feature engineering and hyperparameter tuning processes used to refine their predictive performance.
+This repository contains the Python code and resources developed for the Machine Learning component of a PhD Thesis focused on predicting rock porosity using well logs, acoustic image logs, and sidewall core data. The project explores the efficacy of several machine learning models, including Random Forest, XGBoost, and Support Vector Machines (SVM), and details the feature engineering and hyperparameter tuning processes used to refine their predictive performance.
 
 # Project Overview
 The core objective is to accurately estimate porosity, a critical reservoir property, by integrating various well log measurements. The data is supplied as CSV files containing depth-indexed well log readings (e.g., Gamma Ray, Density, Neutron, etc.) and Porosity readings from sidewall core.
