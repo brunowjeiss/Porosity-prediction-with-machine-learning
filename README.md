@@ -14,10 +14,16 @@ Nuclear Magnetic Resonance (NMR) Logs
 A vuggy index (a measure of pore space shape/type) extracted from Acoustic Borehole Image Logs.
 The models' predictions were validated against routine core petrophysical analyses, which is the industry standard for ground truth.
 
+<img width="987" height="436" alt="image" src="https://github.com/user-attachments/assets/5d2f5908-c624-430f-88bc-cc8422260933" />
+
+
 Algorithm	R2 Score	Root Mean Squared Error (RMSE)
 Random Forest	0.835	1.75
 XGBoost	0.836	1.68
 Support Vector Regression (SVR)	0.8	1.82
+
+<img width="977" height="1053" alt="image" src="https://github.com/user-attachments/assets/8c1cf5b1-cd49-4bcf-be64-756aaad9a956" />
+
 
 Key Takeaway: All three models, particularly XGBoost (with an R2 of 0.836 and RMSE of 1.68), significantly outperformed the original NMR measurement. This demonstrates that the machine learning integration provides a much more accurate porosity estimate—which is more reliable and robust than traditional methods, ultimately saving time and cost in reservoir evaluation.
 
