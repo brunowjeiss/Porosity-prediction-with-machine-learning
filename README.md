@@ -5,6 +5,8 @@ This repository contains Python code and resources developed for a novel machine
 ## Project Overview
 
 This project focuses on accurately predicting porosity, a critical geological property, in the challenging Brazilian Pre-Salt oil and gas reservoirs. Consistent geological and petrophysical models are vital for successful exploration and production in these complex areas.
+The proposed workflow is recommended for petroleum fields, from the moment where there is a large-enough body of knowledge on reservoir characteristics, coupled with enough core sampling data for training the algorithms. It offers significant time and cost savings compared to traditional methods, consdiring it takes months to process core data and obtain porosity measurements in the lab.
+
 
 ## Machine Learning Approach 
 
@@ -32,7 +34,7 @@ The complete methodology from a scientific perspective is showcased in the flowc
 <img width="744" height="1009" alt="image" src="https://github.com/user-attachments/assets/09bd0002-c79d-4671-9d7a-4d0ce0a0ab9a" />
 
 ## Results
-
+The predicted porosity curves for the three machine learning models are displayed below. It is noteworthy that the predicted curves from all models follows the general trend displayed in PHIT from NMR, but also accounts the abrupt variations, in high-frequency, observed in the Vuggy Porosity Index. 
 
 <img width="987" height="436" alt="image" src="https://github.com/user-attachments/assets/5d2f5908-c624-430f-88bc-cc8422260933" />
 
