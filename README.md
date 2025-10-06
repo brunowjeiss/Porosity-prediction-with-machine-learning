@@ -5,7 +5,7 @@ This repository contains Python code and resources developed for a novel machine
 ## Project Overview
 
 This project focuses on accurately predicting porosity, a critical geological property, in the challenging Brazilian Pre-Salt oil and gas reservoirs. Consistent geological and petrophysical models are vital for successful exploration and production in these complex areas.
-The proposed workflow is recommended for petroleum fields, from the moment where there is a large-enough body of knowledge on reservoir characteristics, coupled with enough core sampling data for training the algorithms. It offers significant time and cost savings compared to traditional methods, consdiring it takes months to process core data and obtain porosity measurements in the lab.
+The proposed workflow is recommended for petroleum fields, from the moment where there is a large-enough body of knowledge on reservoir characteristics, coupled with enough core sampling data for training the algorithms. It offers significant time and cost savings compared to traditional methods, considering it takes months to process core data and obtain porosity measurements in the lab.
 
 
 ## Machine Learning Approach 
@@ -16,8 +16,8 @@ Nuclear Magnetic Resonance (NMR) Logs
 A vuggy index (a measure of pore space shape/type) extracted from Acoustic Borehole Image Logs.
 The models' predictions were validated against routine core petrophysical analyses, which is the industry standard for ground truth.
 
-## Algorithms and Performance
-We tested three popular machine learning algorithms: Random Forest, XGBoost, and Support Vector Regression (SVR).
+## Algorithms 
+Three machine learning algorithms were tested: Random Forest, XGBoost, and Support Vector Regression (SVR).
 
 ## Workflow
 
@@ -47,6 +47,6 @@ Support Vector Regression (SVR)	0.8	1.82
 <img width="977" height="1053" alt="image" src="https://github.com/user-attachments/assets/8c1cf5b1-cd49-4bcf-be64-756aaad9a956" />
 
 
-Key Takeaway: All three models, particularly XGBoost (with an R2 of 0.836 and RMSE of 1.68), significantly outperformed the original NMR measurement. This demonstrates that the machine learning integration provides a much more accurate porosity estimate—which is more reliable and robust than traditional methods, ultimately saving time and cost in reservoir evaluation.
+Key Takeaway: All three models, particularly XGBoost (with an R2 of 0.836 and RMSE of 1.68), significantly outperformed the original NMR measurement. This demonstrates that the machine learning workflow provides a much more accurate porosity estimate—which is more reliable and robust than traditional methods, ultimately saving time and cost in reservoir evaluation.
 
 
