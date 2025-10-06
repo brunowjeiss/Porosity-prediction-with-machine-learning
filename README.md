@@ -41,7 +41,8 @@ The project follows these major steps:
 5. **Hyperparameter Optimization**: Use Grid Search or Bayesian Optimization to fine-tune model parameters.
 6. **Evaluation**: Assess model performance with regression metrics such as RMSE and R² score.
 
-<img width="902" height="1222" alt="image" src="https://github.com/user-attachments/assets/79067db5-cdde-482d-9468-a6d0572a8b3c" />
+The complete methodology from a scientific perspective is showcased in the flowchart below:
+<img width="744" height="1009" alt="image" src="https://github.com/user-attachments/assets/09bd0002-c79d-4671-9d7a-4d0ce0a0ab9a" />
 
 
 
